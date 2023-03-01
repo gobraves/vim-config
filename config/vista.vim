@@ -6,8 +6,9 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 
 " Executive used when opening vista sidebar without specifying it.
 " See all the avaliable executives via `:echo g:vista#executives`.
-"let g:vista_default_executive = 'ctags'
-let g:vista_default_executive = 'coc'
+
+" let g:vista_default_executive = 'coc'
+let g:vista_default_executive = 'ctags'
 
 " Set the executive for some filetypes explicitly. Use the explicit executive
 " instead of the default one for these filetypes when using `:Vista` without
@@ -38,17 +39,8 @@ let g:vista#renderer#icons = {
 \   "variable": "\uf71b",
 \  }
 
-nmap <leader>b :Vista!!<cr>
+"let g:vista_echo_cursor_strategy ='floating_win'
+let g:vista#finders = ['fzf']
 
-
-function! NearestMethodOrFunction() abort
-  return get(b:, 'vista_nearest_method_or_function', '')
-endfunction
-
-set statusline+=%{NearestMethodOrFunction()}
-
-" By default vista.vim never run if you don't call it explicitly.
-"
-" If you want to show the nearest function in your statusline automatically,
-" you can add the following line to your vimrc
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+nmap <leader>tt :Vista!!<cr>
+nmap <leader>ts :Vista finder<cr>

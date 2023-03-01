@@ -1,7 +1,6 @@
 " --+ telescope
-nnoremap <silent> <C-Space>f :Telescope find_files<CR>
-nnoremap <silent> <C-Space>b :Telescope buffers<CR>
-nnoremap <silent> <C-Space>c :Telescope commands<CR>
-nnoremap <silent> <C-Space><C-Space> :Telescope<CR>
-nnoremap <silent> <C-Space><Space> :Telescope<CR>
 
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

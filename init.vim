@@ -26,6 +26,7 @@ Plug 'saecki/crates.nvim', { 'tag': 'v0.3.0' }
 Plug 'sindrets/diffview.nvim'
 Plug 'folke/todo-comments.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 " 语法支持
@@ -42,7 +43,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'navarasu/onedark.nvim'
 
 "Plug orgmode
-"Plug 'nvim-orgmode/orgmode'
+Plug 'nvim-orgmode/orgmode'
 
 "Plug leap for move easily
 Plug 'tpope/vim-repeat'
